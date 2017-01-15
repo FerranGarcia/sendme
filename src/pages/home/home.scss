@@ -1,0 +1,15 @@
+page-home {
+
+  .placeholder{
+      width: inherit;
+      height: auto;
+      text-align: center;
+  }
+  .placeholder .image  {
+      background: url('../assets/img/origami.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      width: inherit;
+      height: 256px;
+  }
+}

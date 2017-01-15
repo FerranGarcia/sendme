@@ -1,0 +1,38 @@
+.unselected{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+#truck{
+  background: url('../assets/icon/Truck-48.png');
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+#van{
+  background: url('../assets/icon/Van-48.png');
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+#car{
+  background: url('../assets/icon/Pickup-48.png');
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+#bike{
+  background: url('../assets/icon/Bicycle-48.png');
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+#motorbike{
+  background: url('../assets/icon/Scooter-48.png');
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}

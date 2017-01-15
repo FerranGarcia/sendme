@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>New route</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form (ngSubmit)="logForm()">
+
+    <ion-list>
+      <ion-list-header>Route</ion-list-header>
+      <ion-item>
+        <ion-icon name="home" item-left></ion-icon>
+        <ion-label>From</ion-label>
+        <ion-input type="text" [(ngModel)]="route.from" name="from"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="navigate" item-left></ion-icon>
+        <ion-label>To</ion-label>
+        <ion-input  type="text" [(ngModel)]="route.to" name="to"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>Departure</ion-list-header>
+      <ion-item>
+        <ion-icon name="calendar" item-left></ion-icon>
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="time.month" name="startDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="clock" item-left></ion-icon>
+        <ion-label>Time</ion-label>
+        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="time.timeStarts" name="startTime"></ion-datetime>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>Vehicle</ion-list-header>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col width-20><div id="bike" class="unselected" (click)="setMedia('bike')"></div></ion-col>
+            <ion-col width-20><div id="motorbike" class="unselected" (click)="setMedia('motorbike')"></div></ion-col>
+            <ion-col width-20><div id="car" class="unselected" (click)="setMedia('car')"></div></ion-col>
+            <ion-col width-20><div id="van" class="unselected" (click)="setMedia('van')"></div></ion-col>
+            <ion-col width-20><div id="truck" class="unselected" (click)="setMedia('truck')"></div></ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+
+    <button ion-button type="submit" block>Add Route</button>
+  </form>
+
+</ion-content>

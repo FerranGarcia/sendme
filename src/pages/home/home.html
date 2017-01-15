@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My shipments</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="placeholder">
+    <div class="image"></div>
+    <h3>Send &amp; Save</h3>
+    <p>Everything you need is to press this button.</p>
+  </div>
+
+  <ion-fab right bottom>
+    <button ion-fab color="blue"><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)="clicked()"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab (click)="clicked()"><ion-icon name="logo-twitter"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
