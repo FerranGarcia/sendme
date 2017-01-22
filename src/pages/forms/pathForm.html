@@ -9,7 +9,7 @@
 
 <ion-content padding>
 
-  <form (ngSubmit)="logForm()">
+  <form (ngSubmit)="submitForm()">
 
     <ion-list>
       <ion-list-header>Route</ion-list-header>
@@ -31,13 +31,13 @@
       <ion-item>
         <ion-icon name="calendar" item-left></ion-icon>
         <ion-label>Date</ion-label>
-        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="time.month" name="startDate"></ion-datetime>
+        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="schedule.dateStarts" name="startDate"></ion-datetime>
       </ion-item>
 
       <ion-item>
         <ion-icon name="clock" item-left></ion-icon>
         <ion-label>Time</ion-label>
-        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="time.timeStarts" name="startTime"></ion-datetime>
+        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="schedule.timeStarts" name="startTime"></ion-datetime>
       </ion-item>
     </ion-list>
 

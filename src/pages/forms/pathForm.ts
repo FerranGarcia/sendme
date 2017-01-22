@@ -9,7 +9,7 @@ import { PathService } from './pathService';
 })
 export class PathForm {
   public route = {}
-  public time = {
+  public schedule = {
     month: '1990-02-19',
     timeStarts: '07:43',
     timeEnds: '1990-02-20'
@@ -21,9 +21,15 @@ export class PathForm {
 
   }
 
-  submitForm(event, key) {
-      if(event.target.value.length > 2) {
-          this.pathService.submitFormPath(event.target.value).subscribe(
+  submitForm() {
+      if(this.route != {}) {
+          var tripInfo = {
+            route: this.route,
+            schedule: this.schedule,
+            media: this.currentMedia
+          };
+
+          this.pathService.submitFormPath(tripInfo).subscribe(
               data => {
                   console.log(data);
               },
@@ -32,6 +38,8 @@ export class PathForm {
               },
               () => console.log('Form Submitted')
           );
+      }else{
+        console.log('missing data')
       }
   }
 
